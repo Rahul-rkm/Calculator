@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to right, rgb(167, 4, 4), rgb(6, 2, 255));
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#calculator{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    min-height: 97vh;
+}
+#result{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    width: 360px;
+    min-height: 90px;
+    text-align: end;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#previous{
+    padding: 2px 5px;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#new{
+    padding: 2px 5px;
+    font-size: 2rem;
+}
+
+#keyboard{
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: repeat(5, 90px);
+    justify-content: center;
+}
+
+
+#keyboard>button{
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid white;
+    padding: 4px;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
+
+#keyboard>button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+#keyboard>button:nth-child(1){
+    grid-column: span 2;
+}
+#keyboard>button:nth-child(18){
+    grid-column: span 2;
+}
+
+#footer{
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 405px){
+    #keyboard{
+        /* display: grid; */
+        grid-template-columns: repeat(4, 65px);
+        grid-template-rows: repeat(5, 65px);
+        /* justify-content: center; */
+
+    }
+    #result{
+        width: 260px;
+        min-height: 90px;
+    }
+    #previous{
+        font-size: 1.3rem;
+        padding: 3px 3px;
+    }
+    #new{
+        font-size: 1.7rem;
+        padding: 3px 3px;
+    }
+    #keyboard>button{
+        font-size: 1.5rem;
+    }
+}
