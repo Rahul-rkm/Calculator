@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-image: linear-gradient(to right, rgb(167, 4, 4), rgb(6, 2, 255));
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#calculator{
+#calculator {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -16,7 +17,8 @@ body{
     margin-top: 5px;
     min-height: 97vh;
 }
-#result{
+
+#result {
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
     width: 360px;
@@ -31,18 +33,18 @@ body{
     word-break: break-all;
 }
 
-#previous{
+#previous {
     padding: 2px 5px;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.75);
 }
 
-#new{
+#new {
     padding: 2px 5px;
     font-size: 2rem;
 }
 
-#keyboard{
+#keyboard {
     display: grid;
     grid-template-columns: repeat(4, 90px);
     grid-template-rows: repeat(5, 90px);
@@ -50,59 +52,67 @@ body{
 }
 
 
-#keyboard>button{
+#keyboard>button {
     background-color: rgba(255, 255, 255, 0.75);
     border: 1px solid white;
     padding: 4px;
     text-align: center;
     font-size: 2rem;
     cursor: pointer;
-    
+
 }
 
-#keyboard>button:hover{
+#keyboard>button:hover {
     background-color: rgba(255, 255, 255, 0.9);
 
 }
 
-#keyboard>button:nth-child(1){
-    grid-column: span 2;
-}
-#keyboard>button:nth-child(18){
+#keyboard>button:nth-child(1) {
     grid-column: span 2;
 }
 
-#footer{
-    background-color: rgba(0, 0, 0, 0.801);
-    color: white;
+#keyboard>button:nth-child(18) {
+    grid-column: span 2;
+}
+
+#footer {
+    padding: 1rem;
+    background-color: black;
     text-align: center;
-    min-height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
 }
 
-@media (max-width: 405px){
-    #keyboard{
+#footer svg {
+    width: 2.25rem;
+    fill: white;
+    vertical-align: middle;
+}
+
+@media (max-width: 405px) {
+    #keyboard {
         /* display: grid; */
         grid-template-columns: repeat(4, 65px);
         grid-template-rows: repeat(5, 65px);
         /* justify-content: center; */
 
     }
-    #result{
+
+    #result {
         width: 260px;
         min-height: 90px;
     }
-    #previous{
+
+    #previous {
         font-size: 1.3rem;
         padding: 3px 3px;
     }
-    #new{
+
+    #new {
         font-size: 1.7rem;
         padding: 3px 3px;
     }
-    #keyboard>button{
+
+    #keyboard>button {
         font-size: 1.5rem;
     }
 }
