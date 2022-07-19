@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/calculator.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -52,6 +53,11 @@
             </svg>
         </a>
     </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service_worker.js');
+        }
+    </script>
 </body>
 <script src="main.js"></script>
 
